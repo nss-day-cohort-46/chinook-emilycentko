@@ -1,10 +1,11 @@
 SELECT Invoice.Total,
     Customer.FirstName,
     Customer.LastName,
-    Invoice.BillingCountry,
+    Customer.Country,
     Employee.FirstName,
     Employee.LastName
-FROM Invoice
+FROM Customer
+JOIN Invoice
+    ON Invoice.CustomerId = Customer.CustomerId
 JOIN Employee
-JOIN Customer
     ON Customer.SupportRepId = Employee.EmployeeId

@@ -1,1 +1,3 @@
-SELECT COUNT() FROM InvoiceLine GROUP BY InvoiceId
+SELECT COUNT()
+FROM InvoiceLine
+GROUP BY InvoiceId

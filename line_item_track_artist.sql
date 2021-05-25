@@ -1,8 +1,9 @@
-SELECT Track.Name,
-    Artist.Name
-FROM Track
-INNER JOIN Artist
-INNER JOIN InvoiceLine
+SELECT Track.Name as Track,
+    Artist.Name as Artist
+FROM InvoiceLine
+JOIN Track
     ON Track.TrackId = InvoiceLine.TrackId
-INNER JOIN Album
+JOIN Artist
     ON Artist.ArtistId = Album.ArtistId
+JOIN Album
+    ON Track.AlbumId = Album.AlbumId
