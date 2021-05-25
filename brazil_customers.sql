@@ -1,1 +1,6 @@
-SELECT FirstName, LastName, CustomerId, Country FROM Customer WHERE Country='Brazil'
+SELECT FirstName,
+    LastName,
+    CustomerId,
+    Country
+FROM Customer
+WHERE Country='Brazil'
